@@ -1,0 +1,21 @@
+#!/usr/cisco/bin/expect
+ 
+set my_first {#Cisco Tcl Signature V1.0}
+set newline {}
+set my_file [lindex $argv 0]
+set my_new_file ${my_file}_sig
+set my_new_handle [open $my_new_file w]
+set my_handle [open $my_file r]
+ 
+puts $my_new_handle $newline
+puts $my_new_handle $my_first
+foreach line [split [read $my_handle] "\n"]  {
+   set new_line {#}
+   append new_line $line
+   puts $my_new_handle $new_line
+}
+ 
+close $my_new_handle
+close $my_handle
+
+

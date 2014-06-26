@@ -1,0 +1,56 @@
+TCL Scripting for Cisco IOS
+
+example scripts index file
+
+Chapter 1: 	no example scripts
+Chapter 2; 	no example scripts
+
+Chapter 3: 	chap3e1.tcl
+		chap3e2.tcl
+
+Chapter 4:	cpu_threshold_email.tcl
+		interface_errors_email.tcl
+
+Chapter 5:	syslogd_book.tcl
+		syslogd_book2.tcl
+		filter.tcl
+		filter2.tcl
+		filter3.tcl
+		filter4.tcl
+		my.mdf
+		my2.mdf
+		my3.mdf
+		chap5e1.tcl
+		chap5e2.tcl
+		chap5e3.tcl
+		chap5e4.tcl
+		clock.tcl
+		ipsla.tcl
+		ipsla1.tcl
+		ipsla1.5.tcl
+		ipsla2.tcl
+		ipsla3.tcl
+		ipslaresult1.tcl
+
+Chapter 6:	MPLS-VPN.tcl
+		Remote-SNMP.tcl
+
+Chapter 7:	my_append
+		myscript
+		myscript.hex
+		myscript.hex_sig
+		myscript.pk7
+		myscript.tcl
+		myscript-changed1char.tcl
+
+Appendix A;	arg-demo.tcl
+		count-to-one.tcl
+		count-to-ten.tbc
+		count-to-ten.tcl
+		debugging-tcl_trace
+		int.tcl
+		mypackages/
+			circle.tcl
+			pkgIndex.tcl
+			square.tcl
+			triangle.tcl

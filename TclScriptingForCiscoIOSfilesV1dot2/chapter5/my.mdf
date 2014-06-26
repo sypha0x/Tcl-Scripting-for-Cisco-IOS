@@ -1,0 +1,9 @@
+<Menu MenuName="My First Menu" schemaVersion="1.1">
+      <MenuTitle>
+      </MenuTitle>
+      <Item>
+		<ItemTitle>
+			<Constant String="This is the first item"/>
+		</ItemTitle>
+      </Item>
+</Menu>

@@ -1,0 +1,69 @@
+# this procedure will be called whenver the variable is read
+proc myReading {var1 var2 var3} {
+     # notify user the variable name being read
+     if {[string eq $var3 "r"]} {puts "reading $var1"}
+}
+
+# this procedure will be called whenver the variable is written
+proc myWriting {var1 var2 var3} {
+     # notify user the variable name being read
+     if {[string eq $var3 "w"]} {puts "writing $var1"}
+}
+
+# this procedure will be called whenver the variable is unset
+proc myUnset {var1 var2 var3} {
+     # notify user the variable name being unset
+     if {[string eq $var3 "u"]} {puts "unset $var1 "}
+}
+
+tcl_trace var a r myReading
+
+tcl_trace var a w myWriting
+
+tcl_trace var a u myUnset 
+
+
+Router234(tcl)#proc myReading {var1 var2 var3} {
++>     if {[string eq $var3 "r"]} {puts "reading $var1"}
++>}
+
+Router234(tcl)#
+Router234(tcl)#proc myWriting {var1 var2 var3} {
++>     if {[string eq $var3 "w"]} {puts "writing $var1"}
++>}
+
+Router234(tcl)#
+Router234(tcl)#proc myUnset {var1 var2 var3} {
++>     if {[string eq $var3 "u"]} {puts "unset $var1 "}
++>}
+
+Router234(tcl)#
+Router234(tcl)#tcl_trace var a r myReading
+
+Router234(tcl)#
+Router234(tcl)#tcl_trace var a w myWriting
+
+Router234(tcl)#
+Router234(tcl)#tcl_trace var a u myUnset 
+
+Router234(tcl)#tcl_trace vinfo a
+{u myUnset} {w myWriting} {r myReading}
+
+
+Router234(tcl)#set a 11
+writing a
+11
+Router234(tcl)#set b $a
+reading a
+11
+Router234(tcl)#unset a
+unset a 
+
+
+Router234(tcl)#tcl_trace vinfo a             
+{u myUnset} {w myWriting} {r myReading}
+Router234(tcl)#tcl_trace vdelete a r myReading
+
+Router234(tcl)#tcl_trace vinfo a              
+{u myUnset} {w myWriting}
+Router234(tcl)#

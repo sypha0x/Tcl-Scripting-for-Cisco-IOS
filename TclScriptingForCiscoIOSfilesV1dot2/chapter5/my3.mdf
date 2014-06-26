@@ -1,0 +1,23 @@
+<Menu MenuName="My First Menu" schemaVersion="1.1">
+      <MenuTitle>
+      </MenuTitle>
+      <Item ContinuePrompt="true">
+		<ItemTitle>
+			<Constant String="This is the first item"/>
+		</ItemTitle>
+		<IOSExecCommand>"show clock"</IOSExecCommand>
+      </Item>
+      <Item ContinuePrompt="true">
+		<ItemTitle>
+			<Constant String="Count Hostname Length"/>
+		</ItemTitle>
+		<EmbeddedTCL>
+			<TCLCommand>return [string length [hostname]]</TCLCommand>
+		</EmbeddedTCL>
+      </Item>
+      <Item>
+		<ItemTitle>
+			<Constant String="Exit"/>
+		</ItemTitle>
+      </Item>
+</Menu>
